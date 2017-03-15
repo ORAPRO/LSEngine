@@ -90,7 +90,8 @@ public class CronJob extends Configured implements Tool {
 		// Create directory on HDFS File System if does not exist.
 		HDFSUtils.createHDFSDirectories(hdfs, tDestinationPath);
 
-		while (true) {
+		boolean cronProcess = Boolean.TRUE;
+		while (cronProcess) {
 			File tInboxDir = new File(tFileSourceLocation);
 			if(tInboxDir.isDirectory())
 			{
@@ -108,5 +109,6 @@ public class CronJob extends Configured implements Tool {
 			}
 			Thread.sleep(1000 * 60 * 5);
 		}
+		return 0;
 	}
 }
