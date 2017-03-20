@@ -18,7 +18,6 @@ public class LSEnginePropertiesReader {
 			lsEnginePropertiesReader = new LSEnginePropertiesReader();
 		}
 		return lsEnginePropertiesReader;
-
 	}
 
 	public void loadProperties(final String propertiesFilePath) {

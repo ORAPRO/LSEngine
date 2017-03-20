@@ -1,5 +1,6 @@
 package com.lsengine.util;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -17,8 +18,7 @@ import org.apache.hadoop.io.IOUtils;
 
 public class HDFSUtils {
 	
-	public static final String FILE_SEPARATOR_PROPERTY = "file.separator";
-	public static final String FILE_SEPARATOR = System.getProperty(FILE_SEPARATOR_PROPERTY);
+	public static final String FILE_SEPARATOR = File.separator;
 	public static final String SUCCESS = "SUCCESS";
 	public static final String FAILED = "FAILED";
 
@@ -54,7 +54,7 @@ public class HDFSUtils {
 	
 	public static String getFileName(final String fileName) {
 		String inputFileName = fileName;
-		String separator = System.getProperty(FILE_SEPARATOR_PROPERTY);
+		String separator = FILE_SEPARATOR;
 		int idx = StringUtils.lastIndexOf(fileName, separator);
 		if (idx != -1) {
 			inputFileName = StringUtils.substring(fileName, idx);
@@ -72,7 +72,7 @@ public class HDFSUtils {
 
 		// Step-4 create MetaData
 		final String outputFileName = args[1]
-				+ System.getProperty(FILE_SEPARATOR_PROPERTY) + inputFileName;
+				+ FILE_SEPARATOR + inputFileName;
 		System.out.println("Output file name: " + outputFileName);
 
 		Path dstFilePath = new Path(outputFileName);

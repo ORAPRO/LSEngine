@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="lib" path="D:/VRBWS/batch300117/hadoopJars/activation-1.1.jar"/>
 	<classpathentry kind="lib" path="D:/VRBWS/batch300117/hadoopJars/aopalliance-1.0.jar"/>
 	<classpathentry kind="lib" path="D:/VRBWS/batch300117/hadoopJars/asm-3.2.jar"/>
@@ -150,5 +149,6 @@
 	<classpathentry kind="lib" path="D:/VRBWS/batch300117/hadoopJars/xmlenc-0.52.jar"/>
 	<classpathentry kind="lib" path="D:/VRBWS/batch300117/hadoopJars/xz-1.0.jar"/>
 	<classpathentry kind="lib" path="D:/VRBWS/batch300117/hadoopJars/zookeeper-3.4.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

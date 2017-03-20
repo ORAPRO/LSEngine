@@ -74,6 +74,7 @@ public class CronJob extends Configured implements Tool {
 				+ HDFSUtils.FILE_SEPARATOR
 				+ lsEnginePropertiesReader
 						.getProperty(LSEngineProperties.FAILED);
+		FileUtils.createDirectories(tFailedLocation);
 
 		final String tHDFSBaseLocation = lsEnginePropertiesReader
 				.getProperty(LSEngineProperties.HDFS_BASE_LOCATION);
